@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="firstNum" />
+    <select name="select" id="selectNode">
+      <option value="0">+</option>
+      <option value="1">-</option>
+      <option value="2">*</option>
+      <option value="3">/</option>
+    </select>
+    <input type="text" id="secondNum" />
+    <button onclick="calc()">계산</button>
+    <script>
+      let firstNum = parseInt(document.getElementById('firstNum').value);
+      let secondNum = parseInt(document.getElementById('secondNum').value);
+      let selectValue = document.getElementById('selectNode').option.value;
+
+      function calc() {
+        var result = 0;
+        if (selectValue == 0) {
+          result = firstNum + secondNum;
+          document.write(result);
+        } else if (selectValue == 1) {
+          result = firstNum - secondNum;
+          document.write(result);
+        } else if (selectValue == 2) {
+          result = firstNum * secondNum;
+          document.write(result);
+        } else {
+          result = firstNum / secondNum;
+          document.write(result);
+        }
+      }
+    </script>
+  </body>
+</html>
